@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Color shortcuts
+C_GREY=""
+C_RESET=""
+if [ `tput colors` -ge 8 ]; then
+    C_GREY="$(tput setaf 8)"
+    C_RESET="$(tput sgr0)"
+fi
+
+# Short directory
+get_short_dir () {
+    dir=$(pwd)
+    if [ ${#dir} -gt 16 ]; then
+        dir="…$(echo $dir | rev | cut -c-15 | rev)"
+    fi
+    echo $dir
+}
+
+# Prompt with no Git
+PS1="\[${C_GREY}\]\$(get_short_dir)$ \[${C_RESET}\]"
+
+# Prompt with Git
+if [ ! `which git` == "" ]; then
+    get_git_branch () {
+        if [ -d "$(pwd)/.git" ]; then
+            branch_name="$(git symbolic-ref HEAD 2>/dev/null)" || branch_name="(unnamed branch)"
+            branch_name=${branch_name##refs/heads/}
+            tree_dirty=$([ "$(git status --porcelain)" == "" ] && echo "" || echo "!")
+            echo " [${branch_name}${tree_dirty}]"
+        fi
+    }
+    PS1="\[${C_GREY}\]\$(get_short_dir)\$(get_git_branch)$ \[${C_RESET}\]"
+fi

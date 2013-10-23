@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Directory navigation
+alias ~="cd ~"
+alias -- -="cd -"
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Listing
+alias ll="ls -Fhlo"
+alias la="ls -AFhlo"
