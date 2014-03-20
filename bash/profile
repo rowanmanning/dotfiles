@@ -6,6 +6,7 @@ declare -a files=(
     $HOME/.dotfiles/bash/options
     $HOME/.dotfiles/bash/paths
     $HOME/.dotfiles/bash/prompt
+    $HOME/.extra
 )
 
 # If these files are readable, source them

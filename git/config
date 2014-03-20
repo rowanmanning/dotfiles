@@ -1,0 +1,51 @@
+
+[alias]
+    aa = add .
+    ap = add -p
+    br = branch
+    co = checkout
+    cb = checkout -b
+    ci = commit
+    cia = commit --amend
+    cl = clone
+    cp = cherry-pick
+    df = diff
+    dh = diff HEAD
+    dw = diff --word-diff
+    lf = log -u
+    lg = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate --graph
+    ll = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate --numstat
+    ls = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    st = status
+    ss = status -s
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow 
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[core]
+    excludesfile = ~/.dotfiles/git/ignore
+    ignorecase = false
+
+[credential]
+    helper = osxkeychain
+
+[push]
+    default = simple
