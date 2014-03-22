@@ -17,3 +17,8 @@ shopt -s nocaseglob
 if [ ! `which subl`  == "" ]; then
     export EDITOR='subl -w'
 fi
+
+# Initialise rbenv if present
+if [ ! `which rbenv`  == "" ]; then
+    eval "$(rbenv init -)"
+fi
