@@ -12,3 +12,8 @@ shopt -s histappend
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
+
+# Set up Sublime Text 2 as an editor (requires command line tool)
+if [ ! `which subl`  == "" ]; then
+    export EDITOR='subl -w'
+fi
