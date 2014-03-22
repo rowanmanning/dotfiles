@@ -7,6 +7,8 @@ These are my dotfiles. Vast swathes copied from [Mathias' dotfiles][mathias].
 Installing
 ----------
 
+You'll need both [Homebrew][brew] and Git installed for this to work. You can install Git with `brew install git` once Homebrew is present.
+
 ```sh
 git clone https://github.com/rowanmanning/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && source bootstrap.sh
 ```
@@ -30,4 +32,5 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 
 
+[brew]: http://brew.sh/
 [mathias]: https://github.com/mathiasbynens/dotfiles
