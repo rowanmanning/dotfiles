@@ -9,6 +9,7 @@ function doIt() {
     ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
     ln -s ~/.dotfiles/git/config ~/.gitconfig
     ln -s ~/.dotfiles/bash/inputrc ~/.inputrc
+    touch ~/.hushlogin
 
     echo "Updating Homebrew..."
     brew update
