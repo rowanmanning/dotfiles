@@ -2,7 +2,7 @@
 My Dotfiles
 ===========
 
-These are my dotfiles. Vast swathes copied from [Mathias' dotfiles][mathias].
+These are my dotfiles. Vast swathes copied from [Mathias' dotfiles][mathias]. They run on a Mac only (for now).
 
 Installing
 ----------
@@ -27,7 +27,7 @@ cd ~/.dotfiles && source bootstrap.sh
 Custom Commands
 ---------------
 
-You can create a `~/.extra` file for things like git author name. Mine looks like this:
+You can create an `~/.extra` file for things like git author name. Mine looks like this:
 
 ```sh
 # Git credentials
