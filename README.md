@@ -14,6 +14,16 @@ git clone https://github.com/rowanmanning/dotfiles.git ~/.dotfiles && cd ~/.dotf
 ```
 
 
+Updating
+--------
+
+To update .dotfiles, run the following:
+
+```sh
+cd ~/.dotfiles && source bootstrap.sh
+```
+
+
 Custom Commands
 ---------------
 
