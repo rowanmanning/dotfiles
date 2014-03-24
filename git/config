@@ -47,5 +47,8 @@
 [credential]
     helper = osxkeychain
 
+[diff]
+    algorithm = patience
+
 [push]
     default = simple
