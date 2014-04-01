@@ -4,11 +4,13 @@ git pull origin master
 function doIt() {
 
     echo "Creating symlinks..."
-    rm -rf ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc
+    rm -rf ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/.vim ~/.vimrc
     ln -s ~/.dotfiles/bash/profile ~/.bash_profile
     ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
     ln -s ~/.dotfiles/git/config ~/.gitconfig
     ln -s ~/.dotfiles/bash/inputrc ~/.inputrc
+    ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+    ln -s ~/.dotfiles/vim ~/.vim
     touch ~/.hushlogin
 
     echo "Updating Homebrew..."
