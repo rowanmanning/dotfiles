@@ -5,6 +5,7 @@
     br = branch
     co = checkout
     cb = checkout -b
+    cop = checkout -p
     ci = commit
     cia = commit --amend
     cl = clone
