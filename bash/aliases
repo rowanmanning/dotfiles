@@ -9,3 +9,6 @@ alias ...="cd ../.."
 # Listing
 alias ll="ls -Fhlo"
 alias la="ls -AFhlo"
+
+# Directory creation
+function mcd() { mkdir -p $1 && cd $1; }
