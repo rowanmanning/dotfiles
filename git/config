@@ -45,6 +45,9 @@
     excludesfile = ~/.dotfiles/git/ignore
     ignorecase = false
 
+[help]
+    autocorrect = 1
+
 [credential]
     helper = osxkeychain
 
