@@ -10,5 +10,8 @@ alias ...="cd ../.."
 alias ll="ls -Fhlo"
 alias la="ls -AFhlo"
 
+# Improved cat (requires https://github.com/rstacruz/hicat)
+alias hi="hicat"
+
 # Directory creation
 function mcd() { mkdir -p $1 && cd $1; }
