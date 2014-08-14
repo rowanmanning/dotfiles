@@ -1,23 +1,25 @@
 #!/usr/bin/env bash
 cd "$(dirname "${BASH_SOURCE}")"
+echo "Updating dotfiles..."
 git pull origin master
 function doIt() {
 
     echo "Creating symlinks..."
-    rm -rf ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/.vim ~/.vimrc
+    rm -rf ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/.vim ~/.vimrc ~/.tmux.conf
     ln -s ~/.dotfiles/bash/profile ~/.bash_profile
     ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
     ln -s ~/.dotfiles/git/config ~/.gitconfig
     ln -s ~/.dotfiles/bash/inputrc ~/.inputrc
     ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
     ln -s ~/.dotfiles/vim ~/.vim
+    ln -s ~/.dotfiles/tmux/conf ~/.tmux.conf
     touch ~/.hushlogin
 
     echo "Updating Homebrew..."
     brew update
 
     echo "Installing Homebrew packages..."
-    brew install bash-completion nvm rbenv ruby-build
+    brew install bash-completion nvm rbenv ruby-build tmux
 
     echo "Loading bash_profile..."
     source ~/.bash_profile

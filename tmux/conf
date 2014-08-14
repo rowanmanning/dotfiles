@@ -1,0 +1,19 @@
+
+# Set prefix
+unbind C-b
+set -g prefix `
+bind-key ` send-prefix
+
+# Turn mouse mode on
+setw -g mode-mouse on
+
+# Allow for faster key repetition
+set -s escape-time 0
+
+# Highlight active window
+set-window-option -g window-status-current-bg colour7
+
+# Split panes
+bind | split-window -h
+bind - split-window -v
+bind _ split-window -v
