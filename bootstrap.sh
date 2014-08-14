@@ -5,7 +5,7 @@ git pull origin master
 function doIt() {
 
     echo "Creating symlinks..."
-    rm -rf ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/.vim ~/.vimrc ~/.tmux.conf
+    rm -rf ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/.vim ~/.vimrc ~/.tmux.conf ~/.tmuxinator
     ln -s ~/.dotfiles/bash/profile ~/.bash_profile
     ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
     ln -s ~/.dotfiles/git/config ~/.gitconfig
@@ -13,6 +13,7 @@ function doIt() {
     ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
     ln -s ~/.dotfiles/vim ~/.vim
     ln -s ~/.dotfiles/tmux/conf ~/.tmux.conf
+    ln -s ~/.dotfiles/tmux/tmuxinator ~/.tmuxinator
     touch ~/.hushlogin
 
     echo "Updating Homebrew..."
@@ -24,7 +25,7 @@ function doIt() {
     echo "Installing Ruby and gems..."
     rbenv install -s 2.1.2
     rbenv global 2.1.2
-    gem install foreman
+    gem install foreman tmuxinator
     rbenv rehash
 
     echo "Loading bash_profile..."
