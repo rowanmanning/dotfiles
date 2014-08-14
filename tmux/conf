@@ -4,8 +4,17 @@ unbind C-b
 set -g prefix `
 bind-key ` send-prefix
 
+# Set default terminal
+set -g default-terminal "screen-256color"
+
+# Det default command to reattach to user namespace
+set-option -g default-command "reattach-to-user-namespace -l bash"
+
 # Turn mouse mode on
-setw -g mode-mouse on
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
 
 # Allow for faster key repetition
 set -s escape-time 0
