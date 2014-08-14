@@ -20,7 +20,7 @@ function doIt() {
     brew update
 
     echo "Installing Homebrew packages..."
-    brew install bash-completion nvm rbenv ruby-build tmux
+    brew install bash-completion nvm rbenv ruby-build tmux reattach-to-user-namespace
 
     echo "Installing Ruby and gems..."
     rbenv install -s 2.1.2

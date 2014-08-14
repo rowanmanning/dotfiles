@@ -15,7 +15,7 @@ shopt -s nocaseglob
 
 # Set up Sublime Text 2 as an editor (requires command line tool)
 if [ ! `which subl`  == "" ]; then
-    export EDITOR='subl -w'
+    export EDITOR='reattach-to-user-namespace subl -w'
 fi
 
 # Initialise rbenv if present
