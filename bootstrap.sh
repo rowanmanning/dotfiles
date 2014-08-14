@@ -21,6 +21,12 @@ function doIt() {
     echo "Installing Homebrew packages..."
     brew install bash-completion nvm rbenv ruby-build tmux
 
+    echo "Installing Ruby and gems..."
+    rbenv install -s 2.1.2
+    rbenv global 2.1.2
+    gem install foreman
+    rbenv rehash
+
     echo "Loading bash_profile..."
     source ~/.bash_profile
     echo "Done!"
