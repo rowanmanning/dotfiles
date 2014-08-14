@@ -17,3 +17,6 @@ set-window-option -g window-status-current-bg colour7
 bind | split-window -h
 bind - split-window -v
 bind _ split-window -v
+
+# Window controls
+bind q killp
