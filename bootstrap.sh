@@ -23,6 +23,7 @@ function doIt() {
     brew install bash-completion nvm rbenv ruby-build tmux reattach-to-user-namespace
 
     echo "Installing Ruby and gems..."
+    brew upgrade rbenv ruby-build
     rbenv install -s 2.1.2
     rbenv global 2.1.2
     gem install foreman tmuxinator
