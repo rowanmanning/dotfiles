@@ -23,6 +23,9 @@
     st = status
     ss = status -s
 
+[branch]
+    autosetuprebase = always
+
 [color]
     branch = auto
     diff = auto
