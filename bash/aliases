@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Directory navigation
+export OLDPWD=`pwd`
 alias ~="cd ~"
-alias -- -="cd -"
+alias -- -="cd - > /dev/null"
 alias ..="cd .."
 alias ...="cd ../.."
 
