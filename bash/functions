@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Get a truncated version of the current directory
+pwd_truncated () {
+    dir=$(pwd)
+    if [ ${#dir} -gt 16 ]; then
+        dir="…$(echo $dir | rev | cut -c-15 | rev)"
+    fi
+    echo $dir
+}
+
+# Get the current git branch name
+get_git_branch () {
+    if [[ ! `which git` == "" && -d "$(pwd)/.git" ]]; then
+        branch_name="$(git symbolic-ref HEAD 2>/dev/null)" || branch_name="-"
+        branch_name=${branch_name##refs/heads/}
+        echo $branch_name;
+    fi
+}
+
+# Get whether the tree is dirty
+is_git_tree_dirty () {
+    if [[ ! `which git` == "" && -d "$(pwd)/.git" ]]; then
+        tree_dirty=$([ "$(git status --porcelain)" == "" ] && echo "" || echo "1")
+        echo $tree_dirty;
+    fi
+}

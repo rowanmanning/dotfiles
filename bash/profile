@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -a files=(
+    $HOME/.dotfiles/bash/functions
     $HOME/.dotfiles/bash/aliases
     $HOME/.dotfiles/bash/exports
     $HOME/.dotfiles/bash/options
