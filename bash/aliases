@@ -14,7 +14,7 @@ alias la="ls -AFhlo"
 alias hi="hicat"
 
 # Directory creation
-function mcd() { mkdir -p $1 && cd $1; }
+function mcd() { mkdir -p "$1" && cd "$1"; }
 
 # Directory removal
 alias rmr="rm -rf"
