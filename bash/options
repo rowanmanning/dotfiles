@@ -25,5 +25,7 @@ fi
 
 # Initialise nvm if present
 if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
+    mkdir -p ~/.nvm
+    export NVM_DIR=~/.nvm
     source "$(brew --prefix nvm)/nvm.sh"
 fi
