@@ -20,7 +20,20 @@ function doIt() {
     brew update
 
     echo "Installing Homebrew packages..."
-    brew install bash-completion nvm rbenv ruby-build tmux reattach-to-user-namespace
+    brew install bash-completion rbenv ruby-build tmux reattach-to-user-namespace
+
+    echo "Installing nvm"
+    git clone git@github.com:creationix/nvm.git ~/.nvm
+
+    echo "Updating nvm"
+    cd ~/.nvm
+    git fetch && git checkout `git describe --abbrev=0 --tags`
+    cd -
+
+    echo "Installing latest node"
+    source ~/.nvm/nvm.sh
+    nvm install 0.12
+    nvm alias default 0.12
 
     echo "Installing Ruby and gems..."
     brew upgrade rbenv ruby-build
