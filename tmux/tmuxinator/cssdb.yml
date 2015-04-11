@@ -1,0 +1,13 @@
+# ~/.tmuxinator/cssdb.yml
+
+name: cssdb
+root: ~/Projects/CSSDB/cssdb.co
+
+pre: subl .
+
+windows:
+  - main:
+      layout: 97c3,158x40,0,0{109x40,0,0,0,48x40,110,0,1}
+      panes:
+        - clear
+        - clear && make serve
