@@ -246,7 +246,7 @@ hi SignColumn      guifg=#9fafaf gui=bold                     ctermfg=109 cterm=
 hi SpecialChar     guifg=#dca3a3 gui=bold                     ctermfg=181 cterm=bold
 hi SpecialComment  guifg=#82a282 gui=bold                     ctermfg=108 cterm=bold
 hi Special         guifg=#cfbfaf                              ctermfg=181
-hi SpecialKey      guifg=#9ece9e                              ctermfg=151
+hi SpecialKey      guifg=#4e4e4e                              ctermfg=239                               " NOTE: modified from original to tone down hidden chars
 hi Statement       guifg=#e3ceab gui=none                     ctermfg=187 cterm=none
 hi StatusLine      guifg=#313633 guibg=#ccdc90                ctermfg=236 ctermbg=186
 hi StatusLineNC    guifg=#2e3330 guibg=#88b090                ctermfg=235 ctermbg=108
