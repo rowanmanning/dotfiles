@@ -19,4 +19,5 @@ if [ ! `which rbenv`  == "" ]; then
 fi
 
 # Initialise nvm
+export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
