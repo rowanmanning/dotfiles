@@ -56,3 +56,5 @@ set wrap
 " wrapmargin: number of characters from right of screen when text should wrap
 set wm=1
 
+" automatically wrap text in Git commit messages
+autocmd Filetype gitcommit setlocal textwidth=72
