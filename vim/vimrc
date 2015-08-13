@@ -59,3 +59,7 @@ autocmd Filetype gitcommit setlocal textwidth=72
 " set color scheme
 let g:zenburn_high_Contrast = 1
 colorscheme zenburn
+
+" associate .js.ejs and .css.ejs extensions with correct filetypes
+au BufRead,BufNewFile *.js.ejs setfiletype javascript
+au BufRead,BufNewFile *.css.ejs setfiletype css
