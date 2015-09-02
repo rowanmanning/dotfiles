@@ -119,9 +119,9 @@ if [ ! `which rbenv` == "" ]; then
 fi
 
 # Initialise nvm (requires it to be at ~/.nvm)
-if [ ! `which nvm` == "" ]; then
-    export NVM_DIR=~/.nvm
-    source ~/.nvm/nvm.sh
+export NVM_DIR=~/.nvm
+if [ -f "$NVM_DIR/nvm.sh" ]; then
+    source "$NVM_DIR/nvm.sh"
 fi
 
 # Initialise bash completion
