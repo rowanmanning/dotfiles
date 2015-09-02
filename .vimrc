@@ -14,7 +14,7 @@ set ai
 " autoread: automatically read file when changed outside
 set ar
 
-" background: background colour used for highlighting
+" background: background color used for highlighting
 set bg=dark
 
 " nobackup: don't back stuff up

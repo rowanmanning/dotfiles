@@ -5,3 +5,5 @@
 .Trashes
 *.sublime-project
 *.sublime-workspace
+*.psd
+*.ai
