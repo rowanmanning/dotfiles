@@ -48,7 +48,7 @@
     untracked = cyan
 
 [core]
-    excludesfile = ~/.dotfiles/git/ignore
+    excludesfile = ~/.dotfiles/.gitignore
     ignorecase = false
 
 [help]
