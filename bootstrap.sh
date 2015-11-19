@@ -5,7 +5,8 @@ git pull origin master
 function doIt() {
 
     echo "Creating symlinks..."
-    rm -rf ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/.vim ~/.vimrc ~/.tmux.conf ~/.tmuxinator
+    rm -rf ~/.atom ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/.vim ~/.vimrc ~/.tmux.conf ~/.tmuxinator
+    ln -s ~/.dotfiles/.atom ~/.atom
     ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
     ln -s ~/.dotfiles/.bashrc ~/.bashrc
     ln -s ~/.dotfiles/.gitconfig ~/.gitconfig

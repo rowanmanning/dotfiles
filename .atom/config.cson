@@ -1,0 +1,28 @@
+"*":
+  "exception-reporting":
+    userId: "ca946995-2943-4929-77f9-edad592b9b0d"
+  "release-notes":
+    viewedVersion: "0.69.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "c40c04db28fefcbdce0a6ac480a789976ecb7124"
+  editor:
+    tabLength: 4
+    showInvisibles: true
+    invisibles: {}
+    lineHeight: 1.4
+    preferredLineLength: 100
+    scrollPastEnd: true
+  core:
+    themes: [
+      "atom-dark-ui"
+      "burn"
+    ]
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
+    ]
+    projectHome: "/Users/rowan.manning/Projects"
+    audioBeep: false
