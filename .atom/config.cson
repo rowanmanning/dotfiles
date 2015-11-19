@@ -26,3 +26,6 @@
     ]
     projectHome: "/Users/rowan.manning/Projects"
     audioBeep: false
+  "file-types":
+    "css.ejs": "source.css"
+    "js.ejs": "source.js"
