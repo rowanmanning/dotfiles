@@ -13,3 +13,26 @@
 #     'prefix': 'log'
 #     'body': 'console.log $1'
 #
+
+# HTML Document
+'.text.html':
+  'HTML Document':
+    'prefix': 'doc'
+    'body': """
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="utf-8">
+          <title>$1</title>
+      </head>
+      <body>
+          $2
+      </body>
+      </html>
+    """
+
+# HTML Script
+'.text.html':
+  'HTML Script':
+    'prefix': 'script'
+    'body': '<script src="$1"></script>'
