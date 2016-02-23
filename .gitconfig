@@ -19,6 +19,7 @@
     lg = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate --graph
     ll = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate --numstat
     ls = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate
+    lsd = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]\\ %Cgreen{%ai}%C(cyan)%d" --decorate
     pro = remote prune origin
     r = reset
     r1 = reset HEAD^
