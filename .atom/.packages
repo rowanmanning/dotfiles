@@ -1,0 +1,6 @@
+# Used by the bootstrap script, not part of Atom
+burn
+editorconfig
+language-docker
+sort-lines
+split-diff

@@ -17,6 +17,17 @@ function doIt() {
     ln -s ~/.dotfiles/.tmuxinator ~/.tmuxinator
     touch ~/.hushlogin
 
+    if [ "$(which apm)" ]; then
+        echo "Installing Atom packages..."
+        cat ~/.dotfiles/.atom/.packages | while read line; do
+            if [[ $line != \#* ]]; then
+                apm install $line
+            fi
+        done
+    else
+        echo "Not installing Atom packages (apm command is not installed)..."
+    fi
+
     echo "Loading bash_profile..."
     source ~/.bash_profile
     echo "Done!"
