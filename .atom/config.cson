@@ -22,6 +22,8 @@
     tabLength: 4
   "markdown-preview":
     useGitHubStyle: true
+  tabs:
+    addNewTabsAtEnd: true
   "tree-view":
     hideIgnoredNames: true
   welcome:
