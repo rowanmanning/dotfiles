@@ -14,6 +14,14 @@ You'll need Git installed for this to work.
 git clone https://github.com/rowanmanning/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && source bootstrap.sh
 ```
 
+The following tools will be initialised/configured if they're present:
+
+  - [homebrew](http://brew.sh/)
+  - [nvm](https://github.com/creationix/nvm)
+  - [rbenv](https://github.com/rbenv/rbenv): `brew install rbenv ruby-build`
+  - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy): `brew install diff-so-fancy`
+  - [hicat](https://github.com/rstacruz/hicat): `npm install -g hicat`
+
 
 Updating
 --------
