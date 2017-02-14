@@ -31,3 +31,10 @@
 ".gfm.source":
   editor:
     preferredLineLength: 75
+".html.text.textile":
+  editor:
+    preferredLineLength: 75
+    softWrap: true
+"source.gfm":
+  editor:
+    softWrap: true

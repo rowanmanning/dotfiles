@@ -1,7 +1,8 @@
 # Used by the bootstrap script, not part of Atom
 burn
 editorconfig
+file-icons
 language-docker
+language-textile
 sort-lines
 split-diff
-file-icons
