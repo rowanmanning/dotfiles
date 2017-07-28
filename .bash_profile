@@ -68,7 +68,7 @@ alias nuke-local-branches="git br | xargs -L1 echo | while read line; do if [[ !
 # ===========
 
 # Set the PATH
-export PATH="./node_modules/.bin:/usr/local/bin:$PATH:/usr/bin:$HOME/bin"
+export PATH="/usr/local/bin:$PATH:/usr/bin:$HOME/bin:./node_modules/.bin"
 
 # Make vim the default editor
 export EDITOR="vim"
