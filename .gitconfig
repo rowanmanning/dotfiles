@@ -15,6 +15,7 @@
     dh = diff HEAD
     dw = diff --word-diff
     finish = !git brd && git pull && git pro
+    gg = grep -C 2 --heading --break -pn
     lf = log -u
     lg = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate --graph
     ll = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate --numstat
