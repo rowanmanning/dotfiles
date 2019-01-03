@@ -5,8 +5,7 @@ git pull origin master
 function doIt() {
 
     echo "Creating symlinks..."
-    rm -rf ~/.atom ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/Library/Application\ Support/Code/User/settings.json ~/.vim ~/.vimrc ~/.tmux.conf ~/.tmuxinator
-    ln -s ~/.dotfiles/.atom ~/.atom
+    rm -rf ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/Library/Application\ Support/Code/User/settings.json ~/.vim ~/.vimrc ~/.tmux.conf ~/.tmuxinator
     ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
     ln -s ~/.dotfiles/.bashrc ~/.bashrc
     ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
@@ -17,17 +16,6 @@ function doIt() {
     ln -s ~/.dotfiles/.tmuxinator ~/.tmuxinator
     ln -s ~/.dotfiles/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json
     touch ~/.hushlogin
-
-    if [ "$(which apm)" ]; then
-        echo "Installing Atom packages..."
-        cat ~/.dotfiles/.atom/.packages | while read line; do
-            if [[ $line != \#* ]]; then
-                apm install $line
-            fi
-        done
-    else
-        echo "Not installing Atom packages (apm command is not installed)..."
-    fi
 
     echo "Loading bash_profile..."
     source ~/.bash_profile
