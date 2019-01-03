@@ -5,7 +5,7 @@ git pull origin master
 function doIt() {
 
     echo "Creating symlinks..."
-    rm -rf ~/.atom ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/.vim ~/.vimrc ~/.tmux.conf ~/.tmuxinator
+    rm -rf ~/.atom ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.inputrc ~/Library/Application\ Support/Code/User/settings.json ~/.vim ~/.vimrc ~/.tmux.conf ~/.tmuxinator
     ln -s ~/.dotfiles/.atom ~/.atom
     ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
     ln -s ~/.dotfiles/.bashrc ~/.bashrc
@@ -15,6 +15,7 @@ function doIt() {
     ln -s ~/.dotfiles/.vimrc ~/.vimrc
     ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
     ln -s ~/.dotfiles/.tmuxinator ~/.tmuxinator
+    ln -s ~/.dotfiles/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json
     touch ~/.hushlogin
 
     if [ "$(which apm)" ]; then

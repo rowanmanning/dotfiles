@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "*.mustache": "html"
+    },
+    "window.zoomLevel": 1,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.editor.tabSizing": "shrink",
+    "window.restoreWindows": "all",
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.insertSpaces": false,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [
+        100
+    ],
+    "editor.tabCompletion": "on",
+    "workbench.startupEditor": "none"
+}
