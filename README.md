@@ -2,7 +2,7 @@
 My Dotfiles
 ===========
 
-These are my dotfiles. Vast swathes copied from [Mathias' dotfiles][mathias]. They run on a Mac only (for now).
+Hi guys, these are my dotfiles. Vast swathes copied from [Mathias' dotfiles][mathias]. They run on a Mac only (for now).
 
 
 Installing
