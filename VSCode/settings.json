@@ -17,5 +17,6 @@
         100
     ],
     "editor.tabCompletion": "on",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "eslint.autoFixOnSave": true
 }
