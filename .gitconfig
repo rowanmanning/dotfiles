@@ -57,9 +57,13 @@
 [core]
     excludesfile = ~/.dotfiles/.gitignore
     ignorecase = false
+    filemode = false
 
 [help]
     autocorrect = 1
+
+[init]
+    defaultBranch = main
 
 [credential]
     helper = osxkeychain
