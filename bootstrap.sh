@@ -12,13 +12,12 @@ function doIt() {
     fi
 
     echo "Creating symlinks..."
-    rm -rf ~/.gitconfig ~/.iterm ~/Library/Application\ Support/Code/User/settings.json ~/.vim ~/.vimrc ~/.zshrc
+    rm -rf ~/.gitconfig ~/.iterm ~/.vim ~/.vimrc ~/.zshrc
     ln -s ~/.dotfiles/.zshrc ~/.zshrc
     ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
     ln -s ~/.dotfiles/.iterm ~/.iterm
     ln -s ~/.dotfiles/.vim ~/.vim
     ln -s ~/.dotfiles/.vimrc ~/.vimrc
-    ln -s ~/.dotfiles/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json
     touch ~/.hushlogin
 
     echo "Loading profile..."
