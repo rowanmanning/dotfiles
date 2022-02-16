@@ -11,7 +11,7 @@ Installing
 You'll need Git installed for this to work.
 
 ```sh
-git clone https://github.com/rowanmanning/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && source bootstrap.sh
+git clone https://github.com/rowanmanning/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && bash bootstrap.sh
 ```
 
 The following tools will be initialised/configured if they're present:
@@ -28,7 +28,7 @@ Updating
 To update .dotfiles, run the following:
 
 ```sh
-cd ~/.dotfiles && source bootstrap.sh
+cd ~/.dotfiles && bash bootstrap.sh
 ```
 
 
