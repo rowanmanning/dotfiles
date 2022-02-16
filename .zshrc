@@ -133,11 +133,9 @@ export HISTSIZE=10000
 # Initialise rbenv
 eval "$(rbenv init -)"
 
-# Initialise nvm (requires it to be at ~/.nvm)
-export NVM_DIR=~/.nvm
-if [ -f "$NVM_DIR/nvm.sh" ]; then
-    source "$NVM_DIR/nvm.sh"
-fi
+# Initialise Volta (requires it to be at ~/.volta)
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 
 # Load .extra

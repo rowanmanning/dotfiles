@@ -17,7 +17,7 @@ git clone https://github.com/rowanmanning/dotfiles.git ~/.dotfiles && cd ~/.dotf
 The following tools will be initialised/configured if they're present:
 
   - [homebrew](http://brew.sh/)
-  - [nvm](https://github.com/creationix/nvm)
+  - [Volta](https://volta.sh/)
   - [rbenv](https://github.com/rbenv/rbenv): `brew install rbenv ruby-build`
   - [hicat](https://github.com/rstacruz/hicat): `npm install -g hicat`
 
