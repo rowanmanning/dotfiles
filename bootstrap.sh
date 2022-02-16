@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cd "$(dirname "${BASH_SOURCE}")"
 echo "Updating dotfiles..."
-git pull origin master
+git pull origin main
 function doIt() {
 
     if [ -d ~/.oh-my-zsh ]; then
