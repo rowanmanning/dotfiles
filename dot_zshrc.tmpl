@@ -149,3 +149,13 @@ fi
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+{{ if .useFTVault -}}
+# FT Vault details
+export VAULT_ADDR=https://vault.in.ft.com
+export VAULT_AUTH_GITHUB_TOKEN=$(security find-generic-password -a "${USER}" -s "FT Vault" -w)
+function vault () {
+    command vault "$@"
+    if [[ $1 == write ]]; then history -d $((HISTCMD-1)) &> /dev/null; fi
+}
+{{- end }}
