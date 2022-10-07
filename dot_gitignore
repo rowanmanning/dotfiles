@@ -1,0 +1,11 @@
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+*.sublime-project
+*.sublime-workspace
+*.psd
+*.ai
+.vscode
+_design

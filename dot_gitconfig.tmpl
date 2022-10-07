@@ -1,0 +1,79 @@
+
+[alias]
+    aa = add .
+    ap = add -p
+    br = branch
+    brd = !OLD_BRANCH="$(git rev-parse --abbrev-ref HEAD)" && git checkout master && git branch -d $OLD_BRANCH
+    co = checkout
+    cb = checkout -b
+    cop = checkout -p
+    ci = commit
+    cia = commit --amend
+    cl = clone
+    cp = cherry-pick
+    df = diff
+    dh = diff HEAD
+    dw = diff --word-diff
+    finish = !git brd && git pull && git pro
+    gg = grep -C 2 --heading --break -pn
+    lf = log -u
+    lg = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate --graph
+    ll = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate --numstat
+    ls = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]%C(cyan)%d" --decorate
+    lsd = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]\\ %Cgreen{%ai}%C(cyan)%d" --decorate
+    pro = remote prune origin
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    st = status
+    ss = status -s
+
+[branch]
+    autosetuprebase = always
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[core]
+    excludesfile = ~/.dotfiles/.gitignore
+    ignorecase = false
+    filemode = false
+
+[help]
+    autocorrect = 1
+
+[init]
+    defaultBranch = main
+
+[credential]
+    helper = osxkeychain
+
+[diff]
+    algorithm = patience
+    compactionHeuristic = true
+
+[push]
+    default = simple
+[user]
+    name = {{ .name | quote }}
+    email = {{ .email | quote }}
