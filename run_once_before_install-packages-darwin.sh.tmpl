@@ -1,3 +1,4 @@
+{{- /* See https://github.com/Homebrew/homebrew-bundle#readme */ -}}
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
@@ -9,6 +10,8 @@ brew "heroku"
 brew "hugo"
 brew "vault"
 brew "volta"
+
+cask "1password/tap/1password-cli"
 
 EOF
 {{ end -}}

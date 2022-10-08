@@ -76,5 +76,5 @@
     default = simple
 
 [user]
-    name = {{ .name | quote }}
-    email = {{ .email | quote }}
+    name = {{ .git.name | quote }}
+    email = {{ .git.email | quote }}
