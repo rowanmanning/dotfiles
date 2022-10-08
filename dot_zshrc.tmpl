@@ -114,11 +114,24 @@ function mcd() { mkdir -p "$1" && cd "$1"; }
 alias rmr="rm -rf"
 
 
+# Path
+# ====
+
+# Prepend Volta path
+export VOLTA_HOME="$HOME/.volta"
+path=('$VOLTA_HOME/bin' $path)
+
+# Prepend Homebrew bin folder
+path=('/usr/local/bin' $path)
+
+# Append node_modules bin folder
+path+=('./node_modules/.bin')
+
+export PATH
+
+
 # ZSH Config
 # ==========
-
-# Set the PATH
-export PATH="/usr/local/bin:$PATH:/usr/bin:$HOME/bin:./node_modules/.bin"
 
 # Make vim the default editor
 export EDITOR="vim"
@@ -135,18 +148,6 @@ export HISTSIZE=10000
 # Initialise Tools
 # ================
 
-# Initialise rbenv
-eval "$(rbenv init -)"
-
-# Initialise nvm (requires it to be at ~/.nvm)
-export NVM_DIR=~/.nvm
-if [ -f "$NVM_DIR/nvm.sh" ]; then
-    source "$NVM_DIR/nvm.sh"
-fi
-
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
