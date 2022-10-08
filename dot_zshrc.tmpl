@@ -1,3 +1,6 @@
+# Import secrets
+source $HOME/.secrets
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -154,7 +157,7 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 {{ if .vault.isFinancialTimes -}}
 # FT Vault details
 export VAULT_ADDR=https://vault.in.ft.com
-export VAULT_AUTH_GITHUB_TOKEN=$(op read op://keys/ft-vault-auth-token/credential)
+export VAULT_AUTH_GITHUB_TOKEN=$SECRET_GITHUB_FT_VAULT_AUTH
 function vault () {
     command vault "$@"
     if [[ $1 == write ]]; then history -d $((HISTCMD-1)) &> /dev/null; fi
