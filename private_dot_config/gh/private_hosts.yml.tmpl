@@ -1,0 +1,3 @@
+github.com:
+    oauth_token: {{ trim (onepasswordRead "op://keys/github-cli-auth-token/credential") }}
+    user: {{ .git.username }}
