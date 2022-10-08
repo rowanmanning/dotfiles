@@ -3,6 +3,12 @@
 
 These are my dotfiles. They're managed with [chezmoi](https://www.chezmoi.io/).
 
+## Requirements
+
+### Mac
+
+It's best to install [Homebrew](https://brew.sh/) first, so that the install script can add relevant formulae.
+
 
 ## Install
 
