@@ -2,6 +2,15 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
+if [ "$(which brew)" == "" ];
+then
+	echo "Installing Homebrew"
+	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+	echo "Homebrew already installed"
+fi
+
+echo "Installing Homebrew packages"
 brew bundle --no-lock --file=/dev/stdin \
 <<EOF
 
