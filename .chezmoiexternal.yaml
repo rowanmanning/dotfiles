@@ -1,15 +1,8 @@
 
-.oh-my-zsh:
-  type: archive
-  url: https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz
-  exact: true
-  exclude: ['./cache']
-  refreshPeriod: 168h
-  stripComponents: 1
-
 .powerline-fonts:
   type: git-repo
   url: https://github.com/powerline/fonts.git
   exact: true
   clone:
-    args: ['--depth=1']
+    args:
+      - --depth=1
