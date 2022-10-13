@@ -47,6 +47,10 @@ path=('$VOLTA_HOME/bin' $path)
 # Prepend Homebrew bin folder
 path=('/usr/local/bin' $path)
 
+# Append ~/bin folder
+export HOME_BIN="$HOME/bin"
+path+=($HOME_BIN)
+
 # Append node_modules bin folder
 path+=('./node_modules/.bin')
 
