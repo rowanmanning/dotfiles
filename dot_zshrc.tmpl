@@ -83,8 +83,12 @@ export GITHUB_AUTH_TOKEN=$SECRET_GITHUB_GENERAL_AUTH;
 # Initialise Tools
 # ================
 
+# Set up Volta for Node.js version management
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Set up rbenv for Ruby version management
+eval "$(rbenv init - zsh)"
 
 {{ if .vault.isFinancialTimes -}}
 # FT Vault details
