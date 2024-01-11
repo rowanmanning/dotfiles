@@ -14,15 +14,14 @@ echo "Installing Homebrew packages"
 brew bundle --no-lock --file=/dev/stdin \
 <<EOF
 
-brew "choosy"
 brew "git"
 brew "gh"
 brew "hugo"
 brew "rbenv"
 brew "ruby-build"
-brew "vault"
 brew "volta"
 
+cask "choosy"
 cask "1password/tap/1password-cli"
 
 EOF
