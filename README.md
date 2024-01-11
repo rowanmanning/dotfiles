@@ -7,7 +7,7 @@ These are my dotfiles. They're managed with [chezmoi](https://www.chezmoi.io/).
 
 ### All
 
-You need to have the [1Password CLI](https://developer.1password.com/docs/cli/get-started/) installed.
+You need to have the [1Password CLI](https://developer.1password.com/docs/cli/get-started/) installed. Secrets must be stored in a vault named `dotfiles`.
 
 ### Mac
 
