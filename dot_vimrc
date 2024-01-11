@@ -63,3 +63,16 @@ colorscheme zenburn
 " associate .js.ejs and .css.ejs extensions with correct filetypes
 au BufRead,BufNewFile *.js.ejs setfiletype javascript
 au BufRead,BufNewFile *.css.ejs setfiletype css
+
+" Configure the github author list plugin
+let g:github_co_author_list_path = '~/.vim/github-co-author-list'
+
+" Plugins via vim plug
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+
+" handle co-authored-by footers in git commits
+" https://github.com/JeHuiPark/github-co-author-vim-plugin?tab=readme-ov-file
+Plug 'jehuipark/github-co-author-vim-plugin'
+
+" End plugin definitions
+call plug#end()
