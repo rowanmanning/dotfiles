@@ -1,3 +1,6 @@
 github.com:
-    oauth_token: {{ trim (onepasswordRead "op://dotfiles/github-cli-auth-token/credential") }}
-    user: {{ .git.username }}
+  oauth_token: {{ trim (onepasswordRead "op://dotfiles/github-cli-auth-token/credential") }}
+  user: {{ .git.username }}
+  users:
+    {{ .git.username }}:
+      oauth_token: {{ trim (onepasswordRead "op://dotfiles/github-cli-auth-token/credential") }}
