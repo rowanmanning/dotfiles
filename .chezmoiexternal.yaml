@@ -11,3 +11,8 @@
   type: file
   url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   refreshPeriod: 720h
+
+.oh-my-zsh/custom/themes/agnoster-rowanmanning.zsh-theme:
+  type: file
+  url: https://raw.githubusercontent.com/rowanmanning/agnoster-zsh-theme/main/agnoster.zsh-theme
+  refreshPeriod: 720h
