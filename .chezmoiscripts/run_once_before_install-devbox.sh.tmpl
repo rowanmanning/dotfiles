@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Install nix
+if [ "$(which nix)" == "" ];
+then
+	echo "⬇️ installing nix"
+	sh <(curl -L https://nixos.org/nix/install) --yes
+	echo "✅ nix installed successfully"
+else
+	echo "✅ nix already installed"
+fi
+
+# Install devbox
+if [ "$(which devbox)" == "" ];
+then
+	echo "⬇️ installing devbox"
+	sh <(curl -fsSL https://get.jetpack.io/devbox) -f
+	echo "✅ devbox installed successfully"
+else
+	echo "✅ devbox already installed"
+fi
