@@ -4,13 +4,13 @@
 
 if [ "$(which brew)" == "" ];
 then
-	echo "Installing Homebrew"
+	echo "⬇️ installing homebrew"
 	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
-	echo "Homebrew already installed"
+	echo "✅ homebrew already installed"
 fi
 
-echo "Installing Homebrew packages"
+echo "⬇️ installing homebrew packages"
 brew bundle --no-lock --file=/dev/stdin \
 <<EOF
 
