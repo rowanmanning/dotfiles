@@ -48,10 +48,16 @@
     changed = green
     untracked = cyan
 
+[commit]
+    gpgsign = true
+
 [core]
     excludesfile = ~/.gitignore
     ignorecase = false
     filemode = false
+
+[gpg]
+    format = ssh
 
 [help]
     autocorrect = 1
@@ -72,3 +78,4 @@
 [user]
     name = {{ .git.name | quote }}
     email = {{ .git.email | quote }}
+    signingkey = {{ trim (onepasswordRead "op://dotfiles/git-ssh/public_key" "UI5PJXDPLJFVRLPRH4YP6ESRKE" ) | quote }}
