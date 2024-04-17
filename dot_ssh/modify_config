@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+const { readFileSync } = require('node:fs');
+
+const startComment = `
+# ------------------------------------------------------------
+# DO NOT EDIT ABOVE THIS LINE.
+# Content is managed by chezmoi and may be overwritten.
+`;
+const endComment = `
+# DO NOT EDIT BELOW THIS LINE.
+# Content is managed by chezmoi and may be overwritten.
+# ------------------------------------------------------------
+`;
+
+let sshConfig = readFileSync('/dev/stdin', 'utf-8');
+
+if (!sshConfig.includes(startComment)) {
+	sshConfig = `${startComment}${sshConfig}`;
+}
+if (!sshConfig.includes(endComment)) {
+	sshConfig = `${sshConfig}${endComment}`;
+}
+
+const customSshConfig = sshConfig.split(startComment)[1].split(endComment)[0];
+
+console.log(`
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/git
+${startComment}
+${customSshConfig.trim()}
+${endComment}
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+`);
