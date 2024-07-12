@@ -82,6 +82,10 @@ export HISTSIZE=10000
 source $HOME/.secrets
 export GITHUB_AUTH_TOKEN=$SECRET_GITHUB_GENERAL_AUTH;
 
+# Disable Puppeteer Chromium downloads to reduce the
+# size of node_modules
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+
 
 # Initialise Tools
 # ================
