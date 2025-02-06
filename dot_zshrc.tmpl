@@ -36,6 +36,30 @@ function mcd() { mkdir -p "$1" && cd "$1"; }
 # Directory removal
 alias rmr="rm -rf"
 
+# Choose an AWS profile, passing the name into the `AWS_PROFILE` environment variable
+function awsp() {
+    PS3='Choose an AWS profile by entering the corresponding number: ';
+    profiles=($(aws configure list-profiles))
+    select profile in "${profiles[@]}"
+    do
+        echo "Using profile \"$profile\""
+        export AWS_PROFILE=$profile
+        break;
+    done
+}
+
+# Choose an AWS region, passing the name into the `AWS_REGION` environment variable
+function awsr() {
+    PS3='Choose an AWS region by entering the corresponding number: ';
+    regions=(eu-west-1 us-east-1)
+    select region in "${regions[@]}"
+    do
+        echo "Using region \"$region\""
+        export AWS_REGION=$region
+        break;
+    done
+}
+
 
 # Path
 # ====
