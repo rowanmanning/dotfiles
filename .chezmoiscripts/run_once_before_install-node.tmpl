@@ -1,0 +1,6 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+echo "⬇️ installing Node.js 22"
+volta install node@22
+{{ end -}}
