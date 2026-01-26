@@ -60,7 +60,7 @@
     "JavaScript": { "formatter": { "language_server": { "name": "biome" } } },
     "TSX": { "formatter": { "language_server": { "name": "biome" } } },
     "TypeScript": { "formatter": { "language_server": { "name": "biome" } } },
-    "YAML": { "formatter": { "language_server": { "name": "biome" } } }
+    "YAML": { "formatter": { "language_server": { "name": "biome" } }, "hard_tabs": false, "tab_size": 2 }
   },
   "lsp": {
     "biome": {
