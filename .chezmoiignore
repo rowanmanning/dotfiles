@@ -8,4 +8,7 @@ README.md
 .vim/git-co-author-list
 .npmrc
 .vimrc
+.ssh/config
+.ssh/git
+.ssh/git.pub
 {{ end }}

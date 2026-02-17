@@ -1,7 +1,5 @@
-{{- if eq .chezmoi.os "darwin" -}}
-#!/bin/bash
-
-# Configure iTerm to use preferences from a custom folder
+{{ if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.iterm"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 {{ end -}}
