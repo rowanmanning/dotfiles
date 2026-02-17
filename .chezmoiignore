@@ -1,2 +1,11 @@
 install.sh
 README.md
+{{ if eq .variant "server" }}
+.aws
+.iterm
+.config/gh
+.config/zed
+.vim/git-co-author-list
+.npmrc
+.vimrc
+{{ end }}
