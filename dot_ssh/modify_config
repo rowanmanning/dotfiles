@@ -1,39 +1,49 @@
-#!/usr/bin/env node
+#!/usr/bin/env bash
 
-const { readFileSync } = require('node:fs');
-
-const startComment = `
+startComment="
 # ------------------------------------------------------------
 # DO NOT EDIT ABOVE THIS LINE.
 # Content is managed by chezmoi and may be overwritten.
-`;
-const endComment = `
+"
+endComment="
 # DO NOT EDIT BELOW THIS LINE.
 # Content is managed by chezmoi and may be overwritten.
 # ------------------------------------------------------------
-`;
+"
 
-let sshConfig = readFileSync('/dev/stdin', 'utf-8');
+sshConfig="$(cat)"
 
-if (!sshConfig.includes(startComment)) {
-	sshConfig = `${startComment}${sshConfig}`;
-}
-if (!sshConfig.includes(endComment)) {
-	sshConfig = `${sshConfig}${endComment}`;
-}
+# Prepend start comment if missing
+if [[ "$sshConfig" != *"$startComment"* ]]; then
+  sshConfig="${startComment}${sshConfig}"
+fi
 
-const customSshConfig = sshConfig.split(startComment)[1].split(endComment)[0];
+# Append end comment if missing
+if [[ "$sshConfig" != *"$endComment"* ]]; then
+  sshConfig="${sshConfig}${endComment}"
+fi
 
-console.log(`
+# Extract content between startComment and endComment
+customSshConfig="${sshConfig#*"$startComment"}"
+customSshConfig="${customSshConfig%%"$endComment"*}"
+
+tmp="${sshConfig#*"$startComment"}" # remove everything up to startComment
+customSshConfig="${tmp%%"$endComment"*}" # remove everything after endComment
+
+# Trim leading/trailing blank lines
+customSshConfig="$(printf '%s' "$customSshConfig" | sed -e '1{/^[[:space:]]*$/d;}' -e '${/^[[:space:]]*$/d;}')"
+
+cat <<EOF
+
 Host github.com
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/git
 ${startComment}
-${customSshConfig.trim()}
+${customSshConfig}
 ${endComment}
 Host *
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
-`);
+EOF
