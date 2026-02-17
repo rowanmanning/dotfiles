@@ -78,4 +78,4 @@
 [user]
     name = {{ .git.name | quote }}
     email = {{ .git.email | quote }}
-    {{ if eq .variant "pc" }}signingkey = {{ trim (onepasswordRead "op://dotfiles/git-ssh/public_key" .onepassword.accountId ) | quote }}{{ end }}
+    {{ if eq .variant "full" }}signingkey = {{ trim (onepasswordRead "op://dotfiles/git-ssh/public_key" .onepassword.accountId ) | quote }}{{ end }}

@@ -1,6 +1,6 @@
 install.sh
 README.md
-{{ if eq .variant "server" }}
+{{ if eq .variant "bare" }}
 .aws
 .iterm
 .config/gh
