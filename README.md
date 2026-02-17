@@ -23,7 +23,7 @@ If you want to run the install script below then you'll need [`curl`](https://cu
 Run the following to set up chezmoi:
 
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --ssh rowanmanning
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init rowanmanning
 ```
 
 Open up `~/.config/chezmoi/chezmoi.yaml` and set the `variant` property to either `full` (for a personal computer with 1Password for auth) or `bare` for an unauthenticated setup with personal preferences only.
