@@ -1,4 +1,3 @@
-install.sh
 README.md
 {{ if eq .variant "bare" }}
 .aws
