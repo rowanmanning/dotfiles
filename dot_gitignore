@@ -9,4 +9,5 @@
 *.psd
 *.ai
 .vscode
+.zed
 _design
