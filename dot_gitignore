@@ -3,6 +3,7 @@
 ._*
 .Spotlight-V100
 .Trashes
+.zed
 *.sublime-project
 *.sublime-workspace
 *.psd
